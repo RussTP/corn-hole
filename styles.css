@@ -10,13 +10,13 @@ nav {
     width: 100%;
     height: 120px;
     text-align: center;
-    background-color: rgb(236, 185, 122);
+    background-color: rgb(230, 188, 137);
 }
 
 h1, .hole, .bean-bag {
     display: inline-block;
     position: relative;
-    color: green;
+    color: rgb(111, 159, 111);
 
 }
 
@@ -25,7 +25,8 @@ h1, .hole, .bean-bag {
     width: 40px;
     top: 15px;
     height: 40px;
-    background-color: blue;
+    background-color: rgb(84, 84, 163);
+    border: 2px solid rgb(40, 40, 68);
     border-radius: 10px 8px 5px 25px;
 }
 
@@ -35,6 +36,7 @@ h1, .hole, .bean-bag {
     width: 50px;
     height: 50px;
     background-color: black;
+    border: 4px solid rgb(193, 110, 0);
     border-radius: 32px;
 }
 
@@ -44,8 +46,16 @@ h1 {
 
 }
 
-h1, .chuck-bags {
+h1 {
     margin-bottom: 30px;
+}
+
+ .playTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    padding-bottom: 20px;
 }
 
 .teams-wrapper {
@@ -54,19 +64,91 @@ h1, .chuck-bags {
     margin: 10px;
 }
 
-#blue-team {
-    flex: 50%;
-    width: 400px;
-    height: 400px;
-    border: 3px solid green;
+#blue-team, #green-team  {
+    flex: 40%;
+    width: 350px;
+    height: 300px;
+    border: 3px solid rgb(111, 159, 111);
 }
 
-#green-team {
-    flex: 50%;
-    width: 400px;
-    height: 400px;
-    border: 3px solid green;
+#outcome {
+    
+    justify-content: center;
+    align-items: center;
+
+  
+    
 }
+
+button {
+    width: 150px;
+    height: 150px;
+      border-radius: 10px 30px 10px 30px;
+}
+
+button:hover {
+    border-radius: 5px 5px 5px 5px;
+    
+}
+
+.pointsBtn{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#reset {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: "center";
+    align-items: center;
+    margin: 20px;
+}
+
+#blueOneBtn, #blueThreeBtn {
+    background-color: rgb(84, 84, 163);
+    color: white;
+}
+
+#blueOneBtn:hover, #blueThreeBtn:hover  {
+    background-color: rgba(193, 109, 0, 0.716);
+}
+ 
+#greenOneBtn, #greenThreeBtn {
+    background-color: rgb(111, 159, 111);
+    color: white;
+}
+
+#greenOneBtn:hover, #greenThreeBtn:hover {
+    background-color: rgba(193, 109, 0, 0.716);
+}
+
+#greenScore, #blueScore {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    
+}
+
+.teamWrapperBlue {
+    color: rgb(84, 84, 163);
+}
+
+.teamWrapperGreen {
+    color: rgb(111, 159, 111);
+}
+
+.teamWrapperBlue, .teamWrapperGreen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    
+}
+
+
 
 .rules-wrapper {
     display: flex;
@@ -74,13 +156,15 @@ h1, .chuck-bags {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    
 
 }
 
-p, h2 {
+ul, h2 {
     padding-top: 8px;
-    margin-left: 10px;
+padding-left: 100px;
 width: 70%;
+
 }
 
 
@@ -90,5 +174,10 @@ width: 70%;
 @media (max-width: 800px) {
     #blue-team, #green-team {
       flex: 100%;
+    }
+    nav, h1 {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
     }
   }
