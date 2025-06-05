@@ -123,7 +123,7 @@ button:hover {
     width: 100px;
     height: 100px;
     display: flex;
-    background-color: rgba(193, 109, 0, 0.716);
+    background-color: rgb(40, 40, 68);
     border: 3px solid rgb(193, 110, 0); 
     color: white;
     justify-content: "center";
@@ -132,11 +132,7 @@ button:hover {
     padding: 5px;
 }
 
-#reset:hover {
-    background-color: rgb(35, 75, 35);
- 
-    
-}
+
 
 #blueOneBtn, #blueThreeBtn {
     background-color: rgb(84, 84, 163);
@@ -145,10 +141,7 @@ button:hover {
 
 }
 
-#blueOneBtn:hover, #blueThreeBtn:hover  {
-    background-color: rgba(193, 109, 0, 0.716);
-    
-}
+
  
 #greenOneBtn, #greenThreeBtn {
     background-color: rgb(111, 159, 111);
@@ -156,9 +149,7 @@ button:hover {
     color: white;
 }
 
-#greenOneBtn:hover, #greenThreeBtn:hover {
-    background-color: rgba(193, 109, 0, 0.716);
-}
+
 
 #greenScore, #blueScore {
     display: flex;
@@ -219,6 +210,14 @@ li, h3 {
         justify-content: center;
         align-items: center;
     }
+  }
+
+  @media (hover: hover) {
+    #reset:hover, #greenOneBtn:hover, #greenThreeBtn:hover,
+    #blueOneBtn:hover, #blueThreeBtn:hover {
+         background-color: rgba(193, 109, 0, 0.716);
+    }
+
   }
 
   footer  {

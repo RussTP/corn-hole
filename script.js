@@ -94,3 +94,12 @@ btnThreeGreen.addEventListener("click", () => {
     checkOutcome();
 });
 
+
+const isTouchDevice = "ontouchstart" in window || navigator.msMaxTouchPoints > 0;
+
+if (!isTouchDevice) {
+    document.querySelectorAll("button").classList.add("hoverable");
+
+} else {
+    document.querySelectorAll("button").classList.remove("hoverable");
+}
