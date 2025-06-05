@@ -28,10 +28,11 @@ function checkOutcome() {
             outcomeDiv.style.color = "rgb(82, 59, 58)";
             outcomeDiv.style.backgroundColor = "rgb(230, 188, 137)"
             outcomeDiv.style.display = "flex";
-            outcomeDiv.style.flex = "20%";
+            outcomeDiv.style.flexGrow ="1";
+            outcomeDiv.style.flexShrink ="2";
             outcomeDiv.style.borderRadius = "50px";
             outcomeDiv.style.border = "3px solid rgb(193, 110, 0)";
-            outcomeDiv.style.margin = "10px";
+            outcomeDiv.style.margin = "5px";
 
         }
         outcomeDiv.textContent = `${outcome} - Final Score Blue Team: ${blueCounter}  Green Team: ${greenCounter}`;
@@ -98,8 +99,8 @@ btnThreeGreen.addEventListener("click", () => {
 const isTouchDevice = "ontouchstart" in window || navigator.msMaxTouchPoints > 0;
 
 if (!isTouchDevice) {
-    document.querySelectorAll("button").classList.add("hoverable");
+    document.querySelectorAll("button").forEach(btn => btn.classList.add("hoverable"));
 
 } else {
-    document.querySelectorAll("button").classList.remove("hoverable");
+    document.querySelectorAll("button").forEach(btn => btn.classList.remove("hoverable"));
 }
