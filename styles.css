@@ -120,8 +120,8 @@ button:hover {
 }
 
 #reset {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     display: flex;
     background-color: rgb(40, 40, 68);
     border: 3px solid rgb(193, 110, 0); 
@@ -129,7 +129,7 @@ button:hover {
     justify-content: "center";
     align-items: center;
     margin: 20px;
-    padding: 5px;
+    padding: 15px;
 }
 
 
