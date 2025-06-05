@@ -25,10 +25,12 @@ function checkOutcome() {
         } else {
             const winner = blueCounter > greenCounter ? "Blue" : "Green";
             outcome = `${winner} won the game!`;
-            outcomeDiv.style.color = "rgb(230, 188, 137)";
+            outcomeDiv.style.color = "rgb(82, 59, 58)";
+            outcomeDiv.style.backgroundColor = "rgb(230, 188, 137)"
             outcomeDiv.style.display = "flex";
             outcomeDiv.style.flex = "20%";
-            outcomeDiv.style.border = "3px solid rgb(111, 159, 111)";
+            outcomeDiv.style.borderRadius = "50px";
+            outcomeDiv.style.border = "3px solid rgb(193, 110, 0)";
             outcomeDiv.style.margin = "10px";
 
         }
@@ -43,9 +45,7 @@ function checkOutcome() {
         resetBtn.id = "reset"
         btnDiv.appendChild(resetBtn);
         resetBtn.addEventListener("click", resetGame);
-        resetBtn.style.backgroundColor = "rgb(230, 188, 137)";
-        resetBtn.style.color = "white";
-        resetBtn.style.border = "3px solid rgb(111, 159, 111)"
+       
        
         function resetGame() {
               blueCounter = 0;
@@ -57,8 +57,7 @@ function checkOutcome() {
         btnThreeBlue.disabled = false;
         btnOneGreen.disabled = false;
         btnThreeGreen.disabled = false;
-          outcomeDiv.style.border = "";
-
+        outcomeDiv.style.display = "none";
 
         }
 
