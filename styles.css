@@ -15,7 +15,7 @@ nav {
     box-shadow: 0 2px 20px 1px rgb(193, 110, 0);
 }
 
-.navLinks, #top, a {
+.navLinks, #top {
    display: flex;
    justify-content: center;
    align-items: center;
@@ -90,7 +90,7 @@ margin-bottom: 30px;
 
 
  #playTitle {
-    text-shadow:  rgb(193, 110, 0) 2px 4px 8px;
+    text-shadow:  rgb(193, 110, 0) 2px 4px 15px;
     text-align: center;
     margin-top: 110px;
     color: rgb(111, 159, 111);
@@ -256,6 +256,7 @@ button {
     margin-bottom: 30px;
     flex-wrap: wrap;
     color: rgb(84, 84, 163);
+    
 
 }
 
