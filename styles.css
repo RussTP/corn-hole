@@ -8,12 +8,44 @@
 nav {
     display: block;
     width: 100%;
-    height: 120px;
+    height: 170px;
     text-align: center;
     background-color: rgb(230, 188, 137);
     border-bottom: 3px solid rgb(193, 110, 0);
     box-shadow: 0 2px 20px 1px rgb(193, 110, 0);
 }
+
+.navLinks, #top, a {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-shrink: 2;
+   margin-bottom: 20px;
+  padding-top: 20px;
+  text-align: center;
+  text-decoration: none;
+  
+}
+
+#blueLink, #greenLink, #rulesLink, #top {
+    display: flex;
+    width: 200px;
+    margin: 10px;
+    border-radius: 10px 30px 10px 30px;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    padding: 5px;
+    font-weight: bold;
+    border: 2px solid rgb(40, 40, 68);
+    background-image: linear-gradient(to right,  #6F9F6F 35%,  #5454A3 100%);
+    color: rgb(40, 40, 68);
+    text-decoration: none;
+}
+
+
+
+
 
 h1, .hole, .bean-bag {
     display: inline-block;
@@ -58,7 +90,7 @@ margin-bottom: 30px;
 
 
  #playTitle {
-  
+    text-shadow:  rgb(193, 110, 0) 2px 4px 8px;
     text-align: center;
     margin-top: 110px;
     color: rgb(111, 159, 111);
@@ -79,15 +111,25 @@ margin-bottom: 30px;
     width: 250px;
     height: auto;
     border-radius: 50px;
-    background-color: rgb(230, 188, 137);;
+    background-color: rgb(230, 188, 137);
     border: 3px solid  rgb(193, 110, 0);
-    margin: 50px;
+    margin: 20px;
 }
 
 #outcome {
     justify-content: center;
     align-items: center;  
+    padding: 10px;
     
+}
+
+#tie {
+    display: "flex";
+    background-color: rgb(230, 188, 137);
+    color: rgb(40, 40, 68);
+    padding:"10px";
+    font-size: 20px;
+    font-weight: bold;
 }
 
 button {
@@ -115,7 +157,39 @@ button {
     flex-flow: wrap;
 }
 
-#reset {
+.roundWrapper{
+    display: flex;
+   flex-wrap: wrap;
+
+}
+
+#roundOver {
+    display: flex;
+          background-color: rgb(40, 40, 68);
+    border: 3px solid rgb(193, 110, 0); 
+    color: white;
+   flex-shrink: 1;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    padding: 15px;
+  
+}
+
+#roundDisplay {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    background-color:  rgb(230, 188, 137);
+  
+
+}
+
+#reset{
     width: 120px;
     height: 120px;
     display: flex;
@@ -210,12 +284,15 @@ li, h3 {
 
   @media (hover: hover) {
     #reset:hover, #greenOneBtn:hover, #greenThreeBtn:hover,
-    #blueOneBtn:hover, #blueThreeBtn:hover {
+    #blueOneBtn:hover, #blueThreeBtn:hover, #roundOver:hover {
          background-color: rgba(193, 109, 0, 0.716);
     }
     button:hover {
             border-radius: 5px 5px 5px 5px;
     cursor: pointer;
+    }
+    #blueLink:hover, #greenLink:hover, #rulesLink:hover, #top:hover {
+        background-image: linear-gradient(90deg,  #5454A3 35%,  #6F9F6F 100%);
     }
 
   }
