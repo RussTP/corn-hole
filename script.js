@@ -1,3 +1,5 @@
+
+//Variables
  let blueCounter = 0;
  let greenCounter = 0;
  let round = 0;
@@ -17,7 +19,7 @@ const roundOverBtn = document.getElementById("roundOver");
 
 
 
-// Checking outcome of the game
+// Checking outcome of the game, (points logic)
 
 function checkOutcome() {
     if ((blueCounter >= 21 || greenCounter >= 21) && !gameOver) {
@@ -55,6 +57,8 @@ function checkOutcome() {
         
         }
         
+        //Reset Game, query  and logic
+
         const btnDiv = document.getElementById("outcome");
         const resetBtn =  document.createElement("button");
         resetBtn.innerText = "Play again!"
@@ -87,7 +91,7 @@ function checkOutcome() {
     }
 }
 
-
+// button event listener
 
 btnOneBlue.addEventListener("click", () => {
     blueCounter +=  + 1;
@@ -129,6 +133,7 @@ function gameRound() {
     }
 }
 
+// touch screen interface to disallow hover on touch screen
 
 const isTouchDevice = "ontouchstart" in window || navigator.msMaxTouchPoints > 0;
 
@@ -138,3 +143,27 @@ if (!isTouchDevice) {
 } else {
     document.querySelectorAll("button").forEach(btn => btn.classList.remove("hoverable"));
 }
+
+
+//awesome hover, click effects for game buttons
+
+function onTouchStart(el) {
+    el.classList.add("touch-active");
+
+}
+
+function onTouchEnd(el) {
+    setTimeout(() => {
+        el.classList.remove("touch-active");
+    }, 200);
+}
+
+function shakeButton(el) {
+    el.classList.add("shake");
+    setTimeout(() => el.classList.remove("shake"), 400);
+}
+
+document.querySelectorAll("button").forEach((btn) => {
+    btn.addEventListener("touchstart", () => shakeButton(btn));
+    btn.addEventListener("mousedown", () => shakeButton(btn));
+});

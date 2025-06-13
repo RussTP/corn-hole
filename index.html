@@ -28,14 +28,15 @@
         <h2 id="playTitle">Play Corn Hole!</h2>
         <div class="teams-wrapper">
         <section id="blue-team">
-              <div class="teamWrapperBlue">
+              
+            <div class="teamWrapperBlue">
             <p class="teamText">Blue team</p>
              <div id="blueScore">Score: 0</div>
              </div>
-            <div class="pointsBtn">
-    
-             <button id="blueOneBtn">1 point</button>
-              <button id="blueThreeBtn">3 points</button>
+            
+             <div class="pointsBtn">
+             <button  id="blueOneBtn" ontouchstart="onTouchStart(this)" ontouchend="onTouchEnd(this)" >1 point</button>
+              <button id="blueThreeBtn"  ontouchstart="onTouchStart(this)" ontouchend="onTouchEnd(this)">3 points</button>
         </div>
         </section>
         <section id="outcome"></section>
@@ -48,14 +49,14 @@
               <div id="greenScore">Score: 0</div>
               </div>
              <div class="pointsBtn">
-                  <button id="greenOneBtn">1 point</button>
-                   <button id="greenThreeBtn">3 points</button>
+                  <button id="greenOneBtn" ontouchstart="onTouchStart(this)" ontouchend="onTouchEnd(this)">1 point</button>
+                   <button id="greenThreeBtn" ontouchstart="onTouchStart(this)" ontouchend="onTouchEnd(this)">3 points</button>
             </div>
         </section>
         </div>
           <section id="tie"></section>
         <section class="roundWrapper">
-             <button id="roundOver">Round Over</button>
+             <button id="roundOver" class="roundTouch" ontouchstart="onTouchStart(this)" ontouchend="onTouchEnd(this)">Round Over</button>
        </section>
         <section class="rules-wrapper">
             <article>
@@ -69,7 +70,7 @@
             </ul>    
             </div>
             </article>
-            <div><a id="top" href="#banner-wrapper">Home</a></div>
+            <div><a id="top" href="#banner-wrapper">Top</a></div>
         </section>
 
     </main>
