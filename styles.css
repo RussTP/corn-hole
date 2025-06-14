@@ -87,7 +87,8 @@ margin-bottom: 30px;
  #playTitle {
     text-shadow:  rgb(193, 110, 0) 2px 4px 15px;
     text-align: center;
-    margin-top: 110px;
+    margin-top: 100px;
+    margin-bottom: 100px;
     color: rgb(111, 159, 111);
 }
 
@@ -182,7 +183,7 @@ box-shadow: rgb(84, 84, 163) 5px 5px 5px;
 #green {
     background-color: rgb(111, 159, 111);
     box-shadow:  rgb(111, 159, 111) 5px 5px 5px;
-    border: 3px solid  rgb(35, 75, 35);
+    border: 2px solid  rgb(35, 75, 35);
 
 }
 /* loaded team content */
