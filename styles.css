@@ -84,6 +84,14 @@ margin-bottom: 30px;
 
 /* main area, teams*/
 
+ #playTitle {
+    text-shadow:  rgb(193, 110, 0) 2px 4px 15px;
+    text-align: center;
+    margin-top: 110px;
+    color: rgb(111, 159, 111);
+}
+
+
 body {
     min-height: 100vh;
     display: flex;
@@ -92,14 +100,93 @@ body {
     
 }
 
+/* Team choose */
 
+.teamIdWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    flex-wrap: wrap;
 
- #playTitle {
-    text-shadow:  rgb(193, 110, 0) 2px 4px 15px;
-    text-align: center;
-    margin-top: 110px;
-    color: rgb(111, 159, 111);
+    
 }
+
+#teamChoose {
+    margin-top: 2em;
+    text-align: center;  
+     color:rgb(111, 159, 111);
+     text-shadow:  rgb(193, 110, 0) 2px 4px 15px;
+
+}
+
+
+.bagSelect {
+    display: flex;
+    width: 6rem;
+    height: 4rem;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.teamIdWrapper > div {
+  margin: 2rem
+}
+   
+
+
+ /* Red Team */
+
+#red {
+    background-color: #8b2626;
+    box-shadow: #8b2626 5px 5px 5px;
+     border: 2px solid rgb(99, 4, 4);
+}
+
+#blue-team > .pointsBtn > button.red-theme {
+    background-color: #8b2626;
+}
+
+#red-theme:hover,
+#red-theme:active,
+#grey-theme:hover,
+#grey-theme:active,
+#blue-theme:hover,
+#blue-theme:active,
+#green-theme:hover,
+#green-theme:active {
+background-color:  rgb(193, 110, 0);
+}
+
+/* grey team */
+
+#grey {
+    background-color: rgb(75, 75, 75);
+    box-shadow:rgb(75, 75, 75) 5px 5px 5px;
+     border: 2px solid rgb(13, 13, 13);
+}
+
+#green-team > .pointsBtn > button.grey-theme {
+    background-color: rgb(75, 75, 75);
+}
+/* blue */
+#blue {
+   background-color:  rgb(84, 84, 163);
+box-shadow: rgb(84, 84, 163) 5px 5px 5px;
+   border: 2px solid rgb(40, 40, 68);
+}
+
+/* green */
+
+#green {
+    background-color: rgb(111, 159, 111);
+    box-shadow:  rgb(111, 159, 111) 5px 5px 5px;
+    border: 3px solid  rgb(35, 75, 35);
+
+}
+/* loaded team content */
+
 
 .teams-wrapper {
     display: flex;
@@ -137,6 +224,7 @@ body {
     border-radius: 50px;
     background-color: rgb(230, 188, 137);
     border: 3px solid  rgb(193, 110, 0);
+    box-shadow: rgb(193, 110, 0) 5px 10px 12px;
     margin: 20px;
 }
 
@@ -161,12 +249,12 @@ button {
     align-items: center;
     justify-content: center;
     flex-grow: 1;
-    flex-shrink: 2;
-    width: 150px;
-    height: 150px;
+    width: 6rem;
+    height: 7rem;
     border-radius: 10px 30px 10px 30px;
     margin: 10px 5px 40px 5px;
-    font-size: 32px;
+    font-size: 1.3em;
+    padding: 1em;
     font-weight: bold;
     touch-action: manipulation;
 }
@@ -254,9 +342,8 @@ button {
 
  #blue-team >.pointsBtn > button.touch-active, #green-team >.pointsBtn > button.touch-active, #reset.touch-active {
     transform: scale(1, 1.2);
-    border-radius: 5px;
     background-color:  rgb(193, 110, 0);
-    transition: transform 0.4s ease, background-color 0.4s ease;
+    transition: transform 0.1s ease, background-color 0.1s ease;
     
 }
 
@@ -267,11 +354,10 @@ button {
 
 
   #roundOver.touch-active {
-    transform: scale(1, 0.1);
-    border-radius: 5px 5px 5px 5px;
+    transform: scale(1, 1.2);
     background-color:  rgb(193, 110, 0);
     border-color:  rgb(40, 40, 68);
-    transition: transform 0.4s ease, background-color 0.4s ease;
+    transition: transform 0.1s ease, background-color 0.1s ease;
   }
 
 
@@ -309,10 +395,15 @@ button {
     #reset.touch-active, #reset:hover {
     background-color: rgba(193, 109, 0, 0.716);
     transform: scale(1, 1.2);
-    border-radius: 5px;
-    transition: transform 0.7s ease, background-color 0.7s ease;
-    }
 
+    transition: transform 0.1s ease, background-color 0.1s ease;
+    }
+    .teamIdWrapper > .bagSelect:hover,
+    .teamIdWrapper > .bagSelect:active  {
+        transform: scale(1, 1.3);
+        transition: transform 0.1s ease
+    }
+   
 
     button:hover {
     cursor: pointer;
@@ -323,11 +414,10 @@ button {
 
     #roundOver.touch-active,
     #roundOver:hover {
-    transform: scale(1, 0.8);
-    border-radius: 5px;
+    transform: scale(1, 1.2);
     background-color:  rgb(193, 110, 0);
     border-color:  rgb(40, 40, 68);
-    transition: transform 0.7s ease, background-color 0.7s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease;
     }
 
   }

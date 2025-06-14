@@ -26,16 +26,25 @@
     </header>
     <main>
         <h2 id="playTitle">Play Corn Hole!</h2>
+        <section id="teamChoose"><h3>Choose your bags!</h3>
+            <div class="teamIdWrapper">
+            <div id="red" class="bagSelect" ontouchstart="onTouchStart(this)" ontouchend="onTouchEnd(this)"></div>
+             <div id="grey" class="bagSelect" ontouchstart="onTouchStart(this)" ontouchend="onTouchEnd(this)"></div>
+              <div id="blue" class="bagSelect" ontouchstart="onTouchStart(this)" ontouchend="onTouchEnd(this)"></div>
+               <div id="green" class="bagSelect" ontouchstart="onTouchStart(this)" ontouchend="onTouchEnd(this)"></div>
+               </div>
+
+        </section>
         <div class="teams-wrapper">
         <section id="blue-team">
               
             <div class="teamWrapperBlue">
-            <p class="teamText">Blue team</p>
+            <p class="teamText" id="teamColor1">Blue team</p>
              <div id="blueScore">Score: 0</div>
              </div>
             
              <div class="pointsBtn">
-             <button  id="blueOneBtn" ontouchstart="onTouchStart(this)" ontouchend="onTouchEnd(this)" >1 point</button>
+             <button  id="blueOneBtn" ontouchstart="onTouchStart(this)" ontouchend="onTouchEnd(this)">1 point</button>
               <button id="blueThreeBtn"  ontouchstart="onTouchStart(this)" ontouchend="onTouchEnd(this)">3 points</button>
         </div>
         </section>
@@ -45,7 +54,7 @@
 
         <section id="green-team">
             <div class="teamWrapperGreen">
-            <p class="teamText">Green team</p>
+            <p class="teamText" id="teamColor2">Green team</p>
               <div id="greenScore">Score: 0</div>
               </div>
              <div class="pointsBtn">
