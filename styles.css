@@ -258,11 +258,16 @@ background-color:  rgb(193, 110, 0);
 
 #outcome  {
     font-size: 2rem;
+     padding: 20px;
 }
 
 #outcome > button {
     margin-left: 30px;
+ 
+    
 }
+
+
 
 #tie {
     display: "flex";
@@ -285,7 +290,7 @@ button {
     border-radius: 10px 30px 10px 30px;
     margin: 10px 5px 0 5px;
     font-size: 2rem;
-    padding: 1em;
+    padding: 3.5rem;
     font-weight: bold;
     touch-action: manipulation;
 }
@@ -352,7 +357,6 @@ button {
     color: white;
     justify-content: "center";
     align-items: center;
-    padding: 15px;
 }
 
 
