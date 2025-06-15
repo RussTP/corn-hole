@@ -116,7 +116,6 @@ function checkOutcome() {
             outcomeDiv.style.flexShrink ="3";
             outcomeDiv.style.borderRadius = "50px";
             outcomeDiv.style.border = "3px solid rgb(193, 110, 0)";
-            resetBtn.style.padding = "30px";
             roundOverBtn.disabled = true;
             tie.style.display = "none";
 
