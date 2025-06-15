@@ -9,11 +9,13 @@
 const btnOneBlue = document.getElementById("blueOneBtn");
 const btnThreeBlue = document.getElementById("blueThreeBtn");
 const blueDisplay = document.getElementById("blueScore");
+const revertBtnT1 = document.getElementById("revertBtnTeam1")
 
 
 const btnOneGreen = document.getElementById("greenOneBtn");
 const btnThreeGreen = document.getElementById("greenThreeBtn");
 const greenDisplay = document.getElementById("greenScore");
+const revertBtnT2 = document.getElementById("revertBtnTeam2")
 
 const outcomeDiv = document.getElementById("outcome");
 const roundOverBtn = document.getElementById("roundOver");
@@ -90,34 +92,36 @@ function checkOutcome() {
     if ((blueCounter >= 21 || greenCounter >= 21) && !gameOver) {
         let outcome;
     if (blueCounter === greenCounter) {
-            tie.textContent = "It's a tie, next highest score wins!";
+            tie.style.display = "flex";
+            tie.textContent = `It's a tie, ${blueCounter} to ${greenCounter} next highest score wins!`;
             tie.style.height = "100px";
-              tie.style.textAlign = "center";
-        tie.style.justifyContent = "center";
-          tie.style.border = "2px solid red";
-    tie.style.alignItems ="center";
-    tie.style.paddingTop = "42px";
+            tie.style.paddingTop = "30px";
+            tie.style.borderTop = "2px solid red";
+            tie.style.borderBottom = "2px solid red";
+            tie.style.alignItems ="center";
             return;
     } 
         
     else if (Math.abs(blueCounter - greenCounter) >= 1) {
-            const winner = blueCounter > greenCounter ? "Blue" : "Green";
-            outcome = `${winner} team won the game!`;
+            const winner = blueCounter > greenCounter ? teamColor1.textContent : teamColor2.textContent;
+            outcome = `${winner} team won the game! Final score: ${blueCounter} - ${greenCounter}`;
             outcomeDiv.textContent = outcome;
             outcomeDiv.style.color = "rgb(82, 59, 58)";
             outcomeDiv.style.backgroundColor = "rgb(230, 188, 137)"
             outcomeDiv.style.display = "flex";
+            outcomeDiv.style.alignItems = "center";
+            outcomeDiv.style.padding = "20px";
+            outcomeDiv.style.boxShadow ="rgb(193, 110, 0) 5px 10px 12px";
             outcomeDiv.style.flexGrow ="1";
-            outcomeDiv.style.flexShrink ="2";
+            outcomeDiv.style.flexShrink ="3";
             outcomeDiv.style.borderRadius = "50px";
             outcomeDiv.style.border = "3px solid rgb(193, 110, 0)";
-            outcomeDiv.style.margin = "5px";
             roundOverBtn.disabled = true;
             tie.style.display = "none";
 
 
         } else {
-        outcomeDiv.textContent = `${outcome} - Final Score Blue Team: ${blueCounter}  Green Team: ${greenCounter}`;
+        outcomeDiv.textContent = `${outcome} - Final Score ${winner} Team: ${blueCounter}  Team: ${greenCounter}`;
         outcomeDiv.style.padding = "10px";
         
         }
@@ -128,17 +132,17 @@ function checkOutcome() {
         const resetBtn =  document.createElement("button");
         resetBtn.innerText = "Play again!"
         resetBtn.id = "reset"
-
         btnDiv.appendChild(resetBtn);
         resetBtn.addEventListener("click", resetGame);
-       
+        
+  
        
         function resetGame() {
               blueCounter = 0;
               greenCounter = 0;
              document.querySelector("#outcome").textContent ="";
              document.querySelector("#blueScore").textContent = "Score: 0"
-              document.querySelector("#greenScore").textContent = "Score: 0"
+             document.querySelector("#greenScore").textContent = "Score: 0"
         
         btnOneBlue.disabled = false;
         btnThreeBlue.disabled = false;
@@ -147,6 +151,22 @@ function checkOutcome() {
         roundOverBtn.disabled = false;
         roundOverBtn.textContent = "Round Over";
         outcomeDiv.style.display = "none";
+
+        btnOneBlue.classList.remove("disabled-btn");
+        btnThreeBlue.classList.remove("disabled-btn");
+        btnOneGreen.classList.remove("disabled-btn");
+        btnThreeGreen.classList.remove("disabled-btn");
+        
+       
+
+        revertBtnT1.disabled = false;
+        revertBtnT2.disabled = false;
+        revertBtnT1.classList.remove("disabled-btn");
+        revertBtnT2.classList.remove("disabled-btn");
+
+        roundOverBtn.classList.remove("disabled-btn");
+
+
       
         }
 
@@ -154,6 +174,24 @@ function checkOutcome() {
         btnThreeBlue.disabled = true;
         btnOneGreen.disabled = true;
         btnThreeGreen.disabled = true;
+        roundOverBtn.disabled = true;
+
+        btnOneBlue.classList.add("disabled-btn");
+        btnThreeBlue.classList.add("disabled-btn");
+        btnOneGreen.classList.add("disabled-btn");
+        btnThreeGreen.classList.add("disabled-btn");
+        
+      
+
+        revertBtnT1.disabled = true;
+        revertBtnT2.disabled = true;
+       
+        revertBtnT1.classList.add("disabled-btn");
+        revertBtnT2.classList.add("disabled-btn");
+
+        roundOverBtn.classList.add("disabled-btn");
+        
+
     }
 }
 
@@ -171,6 +209,15 @@ btnThreeBlue.addEventListener("click", () => {
   
 });
 
+revertBtnT1.addEventListener("click", () => {
+    blueCounter += -1;
+     if (blueCounter <= 1) {
+     blueCounter = 0;
+    }
+    blueDisplay.textContent = "Score: " + blueCounter;
+    
+});
+
 btnOneGreen.addEventListener("click", () => {
     greenCounter += 1;
     greenDisplay.textContent = "Score: " + greenCounter;
@@ -183,6 +230,14 @@ btnThreeGreen.addEventListener("click", () => {
     
 });
 
+revertBtnT2.addEventListener("click", () => {
+    greenCounter += -1;
+     if (greenCounter <= 1) {
+        greenCounter = 0;
+    }
+    greenDisplay.textContent = "Score: " + greenCounter;
+   
+});
 roundOverBtn.addEventListener("click", function () {
 round ++;
 roundOverBtn.textContent = "Round: " + round; 

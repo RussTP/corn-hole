@@ -1,9 +1,18 @@
+@font-face {
+    font-family: "Blockblueprint-LV7z5";
+    src: url("fonts/Blockblueprint-LV7z5.ttf")format("truetype");  
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: sans-serif, roboto;
+    font-family: "Blockblueprint-LV7z5", sans-serif;
 }
+
+
 
 /* nav area, cornhole design */
 
@@ -15,6 +24,7 @@ nav {
     background-color: rgb(230, 188, 137);
     border-bottom: 3px solid rgb(193, 110, 0);
     box-shadow: 0 2px 20px 1px rgb(193, 110, 0);
+    
 }
 
 .navLinks, #top {
@@ -23,7 +33,7 @@ nav {
    align-items: center;
    flex-shrink: 2;
    margin-bottom: 20px;
-  padding-top: 20px;
+  padding-top: 10px;
   text-align: center;
   text-decoration: none;
   
@@ -37,8 +47,8 @@ nav {
     border-radius: 10px 30px 10px 30px;
     justify-content: center;
     align-items: center;
-    font-size: 16px;
-    padding: 5px;
+    font-size: 1.5em;
+    padding: 2px;
     font-weight: bold;
     border: 2px solid rgb(40, 40, 68);
     background-image: linear-gradient(to right,  #6F9F6F 35%,  #5454A3 100%);
@@ -56,7 +66,7 @@ h1, .hole, .bean-bag {
 
 }
 h1 {
-    font-size: 50px;
+    font-size: 65px;
     top: 30px;
 margin-bottom: 30px;
 }
@@ -94,6 +104,7 @@ margin-bottom: 30px;
  #playTitle {
     text-shadow:  rgb(193, 110, 0) 2px 4px 15px;
     text-align: center;
+    font-size: 2rem;
     margin-top: 3em;
     margin-bottom: 10px;
     color: rgb(111, 159, 111);
@@ -111,6 +122,7 @@ body {
     display: flex;
     flex-direction: column;
     background-color: beige;
+    
     
 }
 
@@ -130,6 +142,7 @@ body {
     text-align: center;  
      color:rgb(111, 159, 111);
      text-shadow:  rgb(193, 110, 0) 2px 4px 15px;
+     font-size: 1.3rem;
 
 }
 
@@ -177,7 +190,7 @@ background-color:  rgb(193, 110, 0);
 #grey {
     background-color: rgb(75, 75, 75);
     box-shadow:rgb(75, 75, 75) 5px 5px 5px;
-     border: 2px solid rgb(13, 13, 13);
+    border: 2px solid rgb(13, 13, 13);
 }
 
 #green-team > .pointsBtn > button.grey-theme {
@@ -186,7 +199,7 @@ background-color:  rgb(193, 110, 0);
 /* blue */
 #blue {
    background-color:  rgb(84, 84, 163);
-box-shadow: rgb(84, 84, 163) 5px 5px 5px;
+   box-shadow: rgb(84, 84, 163) 5px 5px 5px;
    border: 2px solid rgb(40, 40, 68);
 }
 
@@ -205,7 +218,7 @@ box-shadow: rgb(84, 84, 163) 5px 5px 5px;
     display: flex;
     flex-wrap: wrap;
     margin: 20px;
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: bold;
 }
 
@@ -241,20 +254,25 @@ box-shadow: rgb(84, 84, 163) 5px 5px 5px;
     margin: 20px;
 }
 
-#outcome {
-    justify-content: center;
-    align-items: center;  
-    padding: 10px;
-    
+
+
+#outcome  {
+    font-size: 2rem;
+}
+
+#outcome > button {
+    margin-left: 30px;
 }
 
 #tie {
     display: "flex";
     background-color: rgb(230, 188, 137);
     color: rgb(40, 40, 68);
-    padding:"10px";
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    
 }
 
 button {
@@ -265,8 +283,8 @@ button {
     width: 6rem;
     height: 7rem;
     border-radius: 10px 30px 10px 30px;
-    margin: 10px 5px 40px 5px;
-    font-size: 1.3em;
+    margin: 10px 5px 0 5px;
+    font-size: 2rem;
     padding: 1em;
     font-weight: bold;
     touch-action: manipulation;
@@ -274,7 +292,7 @@ button {
 
 
 
-.pointsBtn{
+.pointsBtn {
    margin-top: 20px;
     display: flex;
     justify-content: space-evenly;
@@ -283,6 +301,14 @@ button {
     flex-flow: wrap;
       
 }
+
+.disabled-btn {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: not-allowed;
+  transition: opacity 0.3s;
+}
+
 
 .roundWrapper{
     display: flex;
@@ -316,18 +342,21 @@ button {
 
 }
 
-#reset{
-    width: 120px;
-    height: 120px;
+
+
+#reset {
+    
     display: flex;
     background-color: rgb(40, 40, 68);
     border: 3px solid rgb(193, 110, 0); 
     color: white;
     justify-content: "center";
     align-items: center;
-    margin: 20px;
     padding: 15px;
 }
+
+
+
 
 /* transforms, keyframes and @media query */
 
@@ -379,6 +408,7 @@ button {
       background-color: rgb(111, 159, 111);
     border: 3px solid  rgb(35, 75, 35);
     color: white;
+
 }
 
 
@@ -388,6 +418,29 @@ button {
     align-items: flex-start;
     
 }
+
+.revert {
+    display: flex;
+    padding: 10px;
+    margin-top: 20px;
+    
+}
+
+.revert > button {
+    display: flex;
+    height: 0.1em;
+    color: white;
+    border-radius: 5px 5px 50px 50px;
+    background-color: rgb(243, 138, 62);
+    border: 3px solid rgb(193, 110, 0);
+    
+}
+    .revert > button.touch-active {
+    background-color: rgb(220, 4, 4);
+    border-color: rgb(139, 11, 11);
+    transform: scale(1, 1.2);
+    transition: transform 0.1s ease, background-color 0.1s ease;
+    }
 
 @media (max-width: 800px) {
     #blue-team, #green-team {
@@ -408,7 +461,6 @@ button {
     #reset.touch-active, #reset:hover {
     background-color: rgba(193, 109, 0, 0.716);
     transform: scale(1, 1.2);
-
     transition: transform 0.1s ease, background-color 0.1s ease;
     }
     .teamIdWrapper > .bagSelect:hover,
@@ -416,6 +468,16 @@ button {
         transform: scale(1, 1.3);
         transition: transform 0.1s ease
     }
+
+    .revert > button.touch-active,
+    .revert > button:hover {
+    background-color: rgb(220, 4, 4);
+    border-color: rgb(139, 11, 11);
+    transform: scale(1, 1.2);
+    transition: transform 0.1s ease, background-color 0.1s ease;
+
+    }
+
    
 
     button:hover {
@@ -424,7 +486,7 @@ button {
     #blueLink:hover, #greenLink:hover, #rulesLink:hover, #top:hover {
         background-image: linear-gradient(90deg,  #5454A3 35%,  #6F9F6F 100%);
     }
-
+ 
     #roundOver.touch-active,
     #roundOver:hover {
     transform: scale(1, 1.2);
@@ -455,6 +517,7 @@ button {
     justify-content: center;
     text-align: center;
     align-items: center;
+    font-size: 1.5rem;
     width: 50%;
     margin: 0 auto;
     margin-bottom: 30px;
